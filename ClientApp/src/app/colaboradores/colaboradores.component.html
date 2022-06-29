@@ -1,0 +1,25 @@
+{{getList()}}
+
+<h1 id="tableLabel">Colaboradores</h1>
+
+<p *ngIf="!colaboradores"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="colaboradores">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Cor do cabelo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of colaboradores">
+      <td>{{ c.nome }}</td>
+      <td> {{ c.idade }}</td>
+      <td> {{ c.corCabelo }} </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<colaboradores-avaliacao> </colaboradores-avaliacao>
